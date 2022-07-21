@@ -4,6 +4,7 @@ import Header from './components/Header';
 import LoginFormModal from './components/LoginFormModal';
 import MobileNavbar2 from './components/MobileNavbar2';
 import SecondNabvar from './components/SecondNabvar';
+import Product from './components/shared/Product';
 
 const App = () => {
   return (
@@ -13,6 +14,9 @@ const App = () => {
       <SecondNabvar />
       <LoginFormModal />
       <HambergurMenu />
+      <div>
+        <Product />
+      </div>
     </div>
   );
 };
