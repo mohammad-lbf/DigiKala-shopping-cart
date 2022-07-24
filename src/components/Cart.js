@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector , useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import CartProduct from './shared/cartProduct';
-
+import { checkout , clear } from '../redux/cart/cartAction';
 const Cart = () => {
     const state = useSelector(state => state.cartState);
     const dispatch = useDispatch();
@@ -32,8 +32,8 @@ const Cart = () => {
                         <p className="text-danger fw-bold">total items: {state.itemsCounter}</p>
                         <p className="text-primary fw-bold">total cost: {state.total} $</p>
                         <div className="d-flex justify-content-between mt-4">
-                            <button onClick={() => {dispatch({type: "CLEAR"   })}} className="btn btn-outline-danger">clear</button>
-                            <button onClick={() => {dispatch({type: "CHECKOUT"})}} className="btn btn-success">check out</button>
+                            <button onClick={() => dispatch(clear())} className="btn btn-outline-danger">پاک کردن</button>
+                            <button onClick={() => dispatch(checkout())} className="btn btn-success">تسویه حساب</button>
                         </div>
                     </div>
                 </div>

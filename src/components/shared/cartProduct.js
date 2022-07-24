@@ -19,16 +19,16 @@ const CartProduct = ({price , title , image , quantity , id}) => {
             <div className="d-flex align-items-center">
             {
                 quantityCounter(state , id) === 1 && 
-                <button onClick={()=> dispatch(cartRemove(currentProduct))} className="btn btn-primary m-1"><i className="bi bi-trash text-white"></i></button>
+                <button onClick={()=> dispatch(cartRemove(currentProduct))} style={{width: "40px" , height: "40px"}} className="btn btn-danger m-1 text-center"><i className="bi bi-trash text-white"></i></button>
             }
             {
                 quantityCounter(state , id) > 1 && 
-                <button onClick={()=> dispatch(cartDecrease(currentProduct)) } className="btn btn-primary m-1">-</button>
+                <button onClick={()=> dispatch(cartDecrease(currentProduct)) } style={{width: "40px" , height: "40px"}} className="btn btn-danger m-1 text-center">-</button>
             }
             <h3 className="fs-5 m-0">{quantity}</h3>
             {
                 quantityCounter(state , id) > 0 && 
-                <button onClick={()=> dispatch(cartIncrease(currentProduct)) } className="btn btn-primary m-1">+</button>
+                <button onClick={()=> dispatch(cartIncrease(currentProduct)) } style={{width: "40px" , height: "40px"}} className="btn btn-danger m-1 text-center">+</button>
             }
             </div>
         </div>
