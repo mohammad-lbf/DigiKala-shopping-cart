@@ -2,7 +2,7 @@ import React from 'react';
 
 const MobileNavbar2 = () => {
     return (
-            <nav className="my-container py-2 justify-content-between  mobile-nav-2 d-flex d-lg-none flex-row-reverse">
+            <nav style={{paddingTop: "57px"}} className="my-container pb-2 justify-content-between  mobile-nav-2 d-flex d-lg-none flex-row-reverse">
     <div className="search-bar justify-content-end rounded align-items-center d-flex bg-mycolor1 p-2">
         <input type="search" className="search-input w-100 text-end" placeholder="جستجو" />
         <i className="icon bi bi-search me-2"></i>

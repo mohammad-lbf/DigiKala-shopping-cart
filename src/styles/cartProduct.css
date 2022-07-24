@@ -1,0 +1,11 @@
+.cart-product{
+    font-size: 15px;
+    border: #706c6c solid 1px;
+    padding: 20px;
+    border-radius: 10px;
+    
+}
+.cart-product img{
+    width: 150px;
+    height: 150px;
+}

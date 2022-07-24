@@ -3,6 +3,7 @@ img{
 }
 header{
     z-index: 5;
+    position: fixed;
 }
 .my-container{
     width: calc(100% - 2rem);

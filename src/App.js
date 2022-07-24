@@ -10,10 +10,13 @@ import DetailesPage from './components/DetailesPage';
 import Products from './components/Products';
 import Cart from './components/Cart';
 import NotFound from './components/NotFound';
+import { Provider } from 'react-redux';
+import store from './redux/store';
 
 const App = () => {
   return (
-    <div>
+    <Provider store={store}>
+        <div>
       <Header />
       <MobileNavbar2 />
       <SecondNabvar />
@@ -28,7 +31,9 @@ const App = () => {
           <Route path="/cart"        element={<Cart />} />
         </Routes>
       </div>
-    </div>
+       </div>
+    </Provider>
+    
   );
 };
 

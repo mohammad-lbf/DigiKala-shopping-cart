@@ -1,8 +1,10 @@
 import React from 'react';
 import logo from '../assets/logo.svg';
 import '../styles/header.css';
-
+import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 const Header = () => {
+    const cartState = useSelector(state => state.cartState)
     return (
         <>
         <header className="my-container start-0 bg-white w-100">
@@ -22,10 +24,16 @@ const Header = () => {
             <img src={logo} className="main-icon" alt="" />
         </div>
         <div className="d-flex align-items-center">
-            <i className="icon bi bi-cart me-2"></i>
+            <Link to= "/cart">
+            <div className="d-flex me-2">
+            <i className="icon bi bi-cart"></i>
+             <p style={{width: "15px" , height: "15px" , fontSize: "10px" , paddingTop: "1px"}} className="text-center m-0 rounded-circle bg-danger text-white">
+                {cartState.itemsCounter} </p>   
+            </div>
+            </Link>
             <div className="d-flex border rounded px-2 py-2 flex-row-reverse align-items-center" role="button" data-bs-toggle="modal" data-bs-target="#login-modal"> 
                 <i className="icon bi bi-box-arrow-in-left lh-0 me-1"></i>
-                <p className="mb-1 me-2">ورود|ثبت نام</p>
+                <p className="mb-1 me-2 text-center">ورود|ثبت نام</p>
             </div>
         </div>
     </nav>
