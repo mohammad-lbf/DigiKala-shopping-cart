@@ -1,4 +1,5 @@
 import React from 'react';
+import './App.css'
 import HambergurMenu from './components/HambergurMenu';
 import Header from './components/Header';
 import LoginFormModal from './components/LoginFormModal';
