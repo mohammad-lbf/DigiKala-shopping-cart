@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const SecondNabvar = () => {
     return (
@@ -8,22 +9,28 @@ const SecondNabvar = () => {
         <ul className="m-0 p-1 d-flex flex-row-reverse">
             <li className="d-flex align-items-center flex-row-reverse border-end me-2 pe-2 justify-content-start">
             <i className="bi bi-list icon"></i>
+                <Link to="/products" className="text-decoration-none">
                 <p className="my-0 ms-1 text-dark fw-bold">دسته بندی کالاها</p>
+                </Link>
             </li>
             <li className="d-flex align-items-center flex-row-reverse me-2 pe-2 justify-content-start">
-                <p className="my-0 ms-1">پر فروش ترین ها</p>
+                <Link to="/products" className="text-decoration-none">
+                <p className="my-0 ms-1 text-dark">پر فروش ترین ها</p>
+                </Link>
             </li>
             <li className="d-flex align-items-center flex-row-reverse me-2 pe-2 justify-content-start">
-                <p className="my-0 ms-1">تخفیف ها و پیشنهاد ها</p>
+                <Link to="/products" className="text-decoration-none">
+                <p className="my-0 ms-1 text-dark">تخفیف ها و پیشنهاد ها</p>
+                </Link>
             </li>
             <li className="d-flex align-items-center flex-row-reverse border-end me-2 pe-2 justify-content-start">
-                <p className="my-0 ms-1">شگفت انگیز ها</p>
+                <p className="my-0 ms-1 text-dark">شگفت انگیز ها</p>
             </li>
             <li className="d-flex align-items-center flex-row-reverse me-2 pe-2 justify-content-start">
-                <p className="my-0 ms-1">سوالی دارید؟</p>
+                <p className="my-0 ms-1 text-dark">سوالی دارید؟</p>
             </li>
             <li className="d-flex align-items-center flex-row-reverse me-2 pe-2 justify-content-start">
-                <p className="my-0 ms-1">!فروشنده شوید</p>
+                <p className="my-0 ms-1 text-dark">!فروشنده شوید</p>
             </li>
         </ul>
     </div>

@@ -11,7 +11,7 @@ const Header = () => {
     {/* <!-- ******************نوبار شماره 1 موبایل ******************************* --> */}
     <nav className="mobile-header align-items-center flex-row-reverse justify-content-between d-lg-none d-flex w-100">
         <i data-bs-toggle="offcanvas" href="#header-humbergur-menu-offcanvas" role="button" className="icon bi bi-list"></i>
-        <img src={logo} className="main-icon" alt="" />
+        <Link to="/products"><img src={logo} className="main-icon" alt="" /></Link>
         <i className=" icon bi bi-question-circle"></i>
     </nav>
     {/* <!-- *********************نوبار شماره 1 کامپیوتر***************************** --> */}
@@ -21,12 +21,12 @@ const Header = () => {
                 <input type="search" className="search-input text-end" placeholder=" جستجو در دیجی کالا" />
                 <i className="icon bi bi-search me-2"></i>
             </div>
-            <img src={logo} className="main-icon" alt="" />
+            <Link className="m-0 p-0 d-flex align-items-center" to="/products"><img src={logo} className="main-icon" alt="" /></Link>
         </div>
         <div className="d-flex align-items-center">
-            <Link to= "/cart">
+            <Link to= "/cart" className="text-decoration-none">
             <div className="d-flex me-2">
-            <i className="icon bi bi-cart"></i>
+            <i className="icon bi bi-cart text-dark"></i>
              <p style={{width: "15px" , height: "15px" , fontSize: "10px" , paddingTop: "1px"}} className="text-center m-0 rounded-circle bg-danger text-white">
                 {cartState.itemsCounter} </p>   
             </div>
