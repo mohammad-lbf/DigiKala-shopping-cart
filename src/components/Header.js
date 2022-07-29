@@ -16,7 +16,8 @@ const Header = () => {
     </nav>
     {/* <!-- *********************نوبار شماره 1 کامپیوتر***************************** --> */}
     <nav className="lg-header px-3 flex-row-reverse justify-content-between d-none border-bottom d-lg-flex w-100 ">
-        <div className="d-flex w-50 justify-content-end">
+        <div className="d-flex w-50 justify-content-end align-items-center ">
+        <Link style={{fontSize:"10px" , width: "90px" , height: "fit-content"}} to="/aboutproject" className="me-2 btn btn-danger">جزئیات پروژه</Link>
             <div className="search-bar w-75 me-2 justify-content-end rounded align-items-center p-2 d-flex bg-mycolor1">
                 <input type="search" className="search-input text-end" placeholder=" جستجو در دیجی کالا" />
                 <i className="icon bi bi-search me-2"></i>

@@ -46,6 +46,7 @@ const HambergurMenu = () => {
             <div className="text-center mt-3 text-secondary">
                 <p>: توسعه داده شده توسط </p>
                 <p>محمد لبافی</p>
+                <Link className="btn btn-danger" to="/aboutproject">جزئیات پروژه</Link>
             </div>
             
         </div>

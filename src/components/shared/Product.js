@@ -49,7 +49,7 @@ const Product = ({id,title , rating , image , price , productDetailes}) => {
                 <p className="mb-0 ms-1 w-100 text-start">{rating.rate}</p>
             </div>
                 <p className="w-100 text-start mt-3 mb-2 fw-bold text-start">{price} $</p>
-                <Link className="w-100 text-start mb-2" to={`/products/${id}`}><i class="bi bi-chevron-left"></i>مشاهده جزئیات </Link>
+                <Link className="w-100 text-start mb-2" to={`/products/${id}`}><i className="bi bi-chevron-left"></i>مشاهده جزئیات </Link>
                 <div className="d-flex align-items-center mt-2" >
                 { isInCart(cartState , id) ?
                     <button className="btn btn-danger mx-2" onClick={() => dispatch(cartIncrease(currentProduct))}>+</button>

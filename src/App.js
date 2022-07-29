@@ -13,6 +13,8 @@ import Cart from './components/Cart';
 import NotFound from './components/NotFound';
 import { Provider } from 'react-redux';
 import store from './redux/store';
+import AboutProject from './components/AboutProject';
+import Footer from './components/Footer';
 
 const App = () => {
   return (
@@ -23,15 +25,17 @@ const App = () => {
       <SecondNabvar />
       <LoginFormModal />
       <HambergurMenu />
-      <div>
+      <div style={{minHeight:"60vh"}}>
         <Routes>
           <Route path="/products/:id" element={<DetailesPage />} />
           <Route path="/products"     element={<Products />} />
           <Route path="/"            element={<Products />} />
           <Route path="/*"           element={<NotFound />}  />
           <Route path="/cart"        element={<Cart />} />
+          <Route path="/aboutproject" element={<AboutProject />} />
         </Routes>
       </div>
+      <Footer />
        </div>
     </Provider>
     
