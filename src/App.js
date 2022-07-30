@@ -5,7 +5,6 @@ import Header from './components/Header';
 import LoginFormModal from './components/LoginFormModal';
 import MobileNavbar2 from './components/MobileNavbar2';
 import SecondNabvar from './components/SecondNabvar';
-import Product from './components/shared/Product';
 import { Routes , Route } from 'react-router';
 import DetailesPage from './components/DetailesPage';
 import Products from './components/Products';
@@ -15,6 +14,11 @@ import { Provider } from 'react-redux';
 import store from './redux/store';
 import AboutProject from './components/AboutProject';
 import Footer from './components/Footer';
+import MensClothing from './components/MensClothing';
+import WomenClothing from './components/WomenClothing';
+import Jwelry from './components/Jwelry';
+import Electronics from './components/Electronics';
+import FilterModal from './components/FilterModal';
 
 const App = () => {
   return (
@@ -23,6 +27,7 @@ const App = () => {
       <Header />
       <MobileNavbar2 />
       <SecondNabvar />
+      <FilterModal />
       <LoginFormModal />
       <HambergurMenu />
       <div style={{minHeight:"60vh"}}>
@@ -33,6 +38,10 @@ const App = () => {
           <Route path="/*"           element={<NotFound />}  />
           <Route path="/cart"        element={<Cart />} />
           <Route path="/aboutproject" element={<AboutProject />} />
+          <Route path="/menclothes"   element={<MensClothing />} />
+          <Route path="/womenclothes"   element={<WomenClothing />} />
+          <Route path="/jewelery"   element={<Jwelry />} />
+          <Route path="/electronics"   element={<Electronics />} />
         </Routes>
       </div>
       <Footer />

@@ -5,24 +5,23 @@ import productsActionCaller from '../redux/products/productsAction';
 import Error from './shared/Error';
 import Product from './shared/Product';
 import FilterNavbar from './FilterNavbar';
-
-const Products = () => {
+const WomenClothing = () => {
     const productsState = useSelector(state => state.productsState);
     const dispatch = useDispatch();
     useEffect(()=>{
         dispatch(productsActionCaller())
         } , [])
-   
+
     return (
-            
         <div className="mt-2">
             <FilterNavbar />
             {productsState.loading ? <Spinner /> : 
             productsState.error ?
             <Error /> :
                 <div className="container text-center">
+                    <p className="fw-bold text-center text-danger">لباس های زنانه</p>
                     <div className="row w-100 justify-content-center m-0">
-                        {productsState.products.map(product => <Product
+                        {productsState.products.filter(item => item.category == "women's clothing").map(product => <Product
                          id={product.id}
                          key={product.id}
                          title={product.title}
@@ -38,4 +37,4 @@ const Products = () => {
     );
 };
 
-export default Products;
+export default WomenClothing;

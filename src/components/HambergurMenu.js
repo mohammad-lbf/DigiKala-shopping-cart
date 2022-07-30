@@ -10,7 +10,7 @@ const HambergurMenu = () => {
     <h5 className="offcanvas-title" id="offcanvasExampleLabel">
         <img src={logo} width="100px" alt="" />
         </h5>
-    <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <button type="button" className="btn-close text-reset" aria-label="Close"></button>
         </div>
         <div className="offcanvas-body p-4">  
             <div className="border-bottom">
@@ -46,7 +46,11 @@ const HambergurMenu = () => {
             <div className="text-center mt-3 text-secondary">
                 <p>: توسعه داده شده توسط </p>
                 <p>محمد لبافی</p>
-                <Link className="btn btn-danger" to="/aboutproject">جزئیات پروژه</Link>
+                <Link to="/aboutproject" className="text-white text-decoration-none">
+                <button className="btn btn-danger"  data-bs-dismiss="offcanvas">
+                جزئیات پروژه
+                </button>
+                </Link>
             </div>
             
         </div>
